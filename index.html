@@ -29,6 +29,12 @@
 	<link rel="stylesheet" type="text/css" href="css/cvitae-grid.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="js/modernizr.js"></script>
+
+	<!-- a helper script for validating the form -->
+	<script type="text/javascript" src="\my_validator.js" ></script>
+<!--	<script type="text/javascript" src="\php sample for email\scripts\gen_validatorv31.js" ></script> -->
+	</head>
+
 </head>
 <body class="intro-4 home">
 	<div class="preloader-overlay">
@@ -48,20 +54,24 @@
 		<div id="home" class="cvitae-section slider sliderStyle4">
 			<div class="">
 				<div class="slider-content">
-					<div class="box">
+					<div class="box1">
 						<p class="name">FERNANDO ZEGA</p>
 						<p class="designation">SOLUTIONER &#x0040 IBM</p>
 					</div>
+					<div class="box2">
+						<ul class="languages">
+							<li><a href="/index.html" title="English">EN</a></li>
+							<li><a href="/index.es.html" title="Español">ES</a></li>
+							<li><a href="/index.pt.html" title="Portugu&#x00EAs">PT</a></li>
+							<li><a href="/index.fr.html" title="Fran&ccedil;ais">FR</a></li>
+							<li><a href="/index.it.html" title="Italiano">IT</a></li>
+						</ul>
+					</div>
 					<img src="img/slider/FZ Pont des Arts 308x308.jpg" class="image" alt="Identicon">
 					<img src="img/slider/4-shadow.png" class="shadow" alt="Shadow">
-					<img src="img/slider/Languages.jpg" class="image2" alt="Languages" usemap="#langmap">
 				</div>
 				<div class="image-left"></div>
 				<div class="image-right"></div>
-				<map name="langmap">
-					<area shape="rect" coords="5,0,20,27" href="index.es.html" title="Español" alt="ES"/>
-					<area shape="rect" coords="30,0,45,27" href="index.html" title="English" alt="EN"/>
- 				</map>
 			</div>
 		</div>
 		<!-- CVitae Slider -->
@@ -104,9 +114,6 @@
 			<div class="cvitae-container">
 				<div class="cvitae-section-content">
 					<div class="content-left short-bio">
-<!--					<div class="pic">
- 							<img class="img-responsive" src="img/bio/4.jpg" alt="Bio Pic">
-							</div> -->
 							<h3 class="cvitae-section-title">A brief summary</h3>
 						<p>Senior Solution Manager with 8+ years of experience in Application Solutions and Innovation for Large deals.</p>
 						<p>Senior Project Manager with 10+ years of experience in Managing Projects and Leading Teams</p>
@@ -125,14 +132,9 @@
 						<a target='_blank' href="https://ar.linkedin.com/in/fernandozega" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Follow on LinkedIn"><span class="ti-linkedin"></span>LinkedIn Profile</a>
 						<a target='_blank' href="https://twitter.com/FernandoZega61" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Follow on Twitter"><span class="ti-twitter"></span>Twitter Profile</a>
 						<a target='_blank' href="https://www.instagram.com/fernando.zega61/?hl=en" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Follow on Instagram"><span class="ti-instagram"></span>Instagram Profile</a>
-						<a target='_blank' href="#" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Follow on WordPress"><span class="ti-wordpress"></span>WordPress Profile</a>
-<!--
-						<a target='_blank' href="https://es.pinterest.com/fernandozega61/" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Follow on Pinterest"><span class="ti-pinterest"></span>Pinterest Profile</a>
-						<a target='_blank' href="#" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Follow on Flickr"><span class="ti-flickr"></span>Flickr Profile</a>
-						<a target='_blank' href="#" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Follow on Tumblr"><span class="ti-tumblr"></span>Tumblr Profile</a>
--->
+						<a target='_blank' href="https://fernandozega.wordpress.com" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Follow on WordPress"><span class="ti-wordpress"></span>WordPress Profile</a>
 						<a download="dummy-resume.txt" onclick="Materialize.toast('Resume Download Successfully', 4000, 'rounded')" href="dummy-resume.txt" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Download my Resume"><span class="ti-download"></span>Download my Resume</a>
-						<a href="mailto:fernando@fernandozega.com" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Email my Resume"><span class="ti-email"></span>Email my Resume</a>
+						<a href="mailto:fernando@fernandozega.com?subject=Fernando Zega CV&body=Please, see my CV."+"/dummy-resume.txt" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Email my Resume"><span class="ti-email"></span>Email my Resume</a>
 					</div>
 				</div>
 			</div>
@@ -352,17 +354,17 @@
 						<p>Please feel fee to leave a message to me. I'm more than interested in hearing from you anytime. Also you can call me or push me a message to my social networks. <br>Thank you <br>Regards -</p>
 					</div>
 					<div class="content-right">
-						<form method="post">
+							<form id="contact_me"  action="/form-to-email2.php" method="post">
 							<div class="row">
 								<div class="col s6">
 									<div class="form-input">
-										<input type="text" placeholder="your name*">
+										Name: <input type="text" name="name" placeholder="your name*">
 										<span class="underline"></span>
 									</div>
 								</div>
 								<div class="col s6">
 									<div class="form-input">
-										<input type="text" placeholder="email*">
+										E-mail: <input type="text" name="email" placeholder="email*">
 										<span class="underline"></span>
 									</div>
 								</div>
@@ -370,13 +372,13 @@
 							<div class="row">
 								<div class="col s6">
 									<div class="form-input">
-										<input type="text" placeholder="phone*">
+										Phone: <input type="text" name="phone" placeholder="phone">
 										<span class="underline"></span>
 									</div>
 								</div>
 								<div class="col s6">
 									<div class="form-input">
-										<input type="text" placeholder="website">
+										Website: <input type="text" name="website" placeholder="website">
 										<span class="underline"></span>
 									</div>
 								</div>
@@ -384,11 +386,11 @@
 							<div class="row">
 								<div class="col s12">
 									<div class="form-textarea">
-										<textarea placeholder="your message"></textarea>
+										Message: <textarea name="message" placeholder="your message"></textarea>
 										<span class="underline"></span>
 									</div>
 									<div class="form-submit">
-										<button type="submit" class="waves-effect waves-cvitae">Submit</button>
+										<button type="submit" name='submit' form='contact_me' value="submit" class="waves-effect waves-cvitae">Submit</button>
 										<span class="underline"></span>
 									</div>
 								</div>
@@ -397,6 +399,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="footer-content">
 				<div class="cvitae-container">
 					<ul class="links">
@@ -417,6 +420,16 @@
 
 	</div>
 	<!-- ./cvitae-site-container -->
+	<script>
+		Validator("contact_me");
+//		var frmvalidator  = new Validator("contact_me");
+//		frmvalidator.addValidation("name","req","Please provide your name");
+//		frmvalidator.addValidation("email","req","Please provide your email");
+//		frmvalidator.addValidation("email","email","Please enter a valid email address");
+alert ("aqui se finaliza")
+		</script>
+	</script>
+	<!-- Validation script -->
 
 	<!-- CVitae Scripts -->
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
