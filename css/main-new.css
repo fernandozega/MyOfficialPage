@@ -2838,7 +2838,7 @@ a:focus {
 	background-size: cover;
 	background-position: center center;
 }
-.intro-4 .sliderStyle4 .slider-content .box1 {
+.intro-4 .sliderStyle4 .slider-content .box {
 	width: 450px;
 	border: 3px solid #ccc;
 	border-radius: 5px;
@@ -2856,26 +2856,22 @@ a:focus {
 	text-align: right;
 	padding: 20px 70px 20px 20px;
 }
-.intro-4 .sliderStyle4.active .slider-content .box1 {
+.intro-4 .sliderStyle4.active .slider-content .box {
 	-webkit-transform: translateY(-50%) translateX(-400px);
 	   -moz-transform: translateY(-50%) translateX(-400px);
 	        transform: translateY(-50%) translateX(-400px);
 	opacity: 1;
 }
-.intro-4 .sliderStyle4 .slider-content .box2 dl dt a {
-	width: 400px;
-	border: 1px solid #ccc;
-	border-radius: 0px;
-	position: fixed;
-	top: 30px;
-	right: 180px;
+.intro-4 .sliderStyle4 .slider-content .boxlang dt dl a.active {
+	width: 800px;
+	border: 3px solid #ccc;
+	border-radius: 10px;
+	position: absolute;
+	top: 40;
+	right: 80;
 	style-type: none;
-	display: block;
-//	float: left;
-//	dt {
-//    	float: left;
-//			}
-
+	display: table;
+	float: left;
 	-webkit-transform: translateY(-50%) translateX(-450px);
 	   -moz-transform: translateY(-50%) translateX(-450px);
 	        transform: translateY(-50%) translateX(-450px);
@@ -2885,9 +2881,12 @@ a:focus {
 	   -moz-transition: transform 1s ease-in 2s, opacity 1s ease-in 2s;
 	        transition: transform 1s ease-in 2s, opacity 1s ease-in 2s;
 	text-align: right;
+ 	li {
+    	float: left;
+			}
 	padding: 20px 70px 20px 20px;
 }
-.intro-4 .sliderStyle4.active .slider-content .box2 dl dt a {
+.intro-4 .sliderStyle4.active .slider-content .boxlang {
 	-webkit-transform: translateY(-50%) translateX(-400px);
 	   -moz-transform: translateY(-50%) translateX(-400px);
 	        transform: translateY(-50%) translateX(-400px);

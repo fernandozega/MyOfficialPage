@@ -618,7 +618,7 @@ h4 a {
 	display: block;
 	transition: box-shadow .3s, transform .3s;
 	margin-bottom: 30px;
-	position: relative;	
+	position: relative;
 }
 
 .demo .item:hover > a {
