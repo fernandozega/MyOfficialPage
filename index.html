@@ -31,8 +31,11 @@
 	<script type="text/javascript" src="js/modernizr.js"></script>
 
 	<!-- a helper script for validating the form -->
+		<script type="text/javascript" src="file:///C:/work/src/github.com/user/MyOfficialPage/my_validator.js" ></script>
+<!--
 	<script type="text/javascript" src="\my_validator.js" ></script>
-<!--	<script type="text/javascript" src="\php sample for email\scripts\gen_validatorv31.js" ></script> -->
+	<script type="text/javascript" src="\php sample for email\scripts\gen_validatorv31.js" ></script>
+-->
 	</head>
 
 </head>
@@ -422,10 +425,10 @@
 	<!-- ./cvitae-site-container -->
 	<script>
 		Validator("contact_me");
-//		var frmvalidator  = new Validator("contact_me");
-//		frmvalidator.addValidation("name","req","Please provide your name");
-//		frmvalidator.addValidation("email","req","Please provide your email");
-//		frmvalidator.addValidation("email","email","Please enter a valid email address");
+		var frmvalidator  = new Validator("contact_me");
+		frmvalidator.addValidation("name","req","Please provide your name");
+		frmvalidator.addValidation("email","req","Please provide your email");
+		frmvalidator.addValidation("email","email","Please enter a valid email address");
 alert ("aqui se finaliza")
 		</script>
 	</script>
