@@ -18,8 +18,8 @@
 	<meta name="robots" content="index, follow" />
 	<meta name="revisit-after" content="60 days" />
 
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="./favicon.ico" type="image/x-icon" />
 
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/themify-icons.css">
@@ -30,15 +30,8 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="js/modernizr.js"></script>
 
-	<!-- a helper script for validating the form -->
-		<script type="text/javascript" src="file:///C:/work/src/github.com/user/MyOfficialPage/my_validator.js" ></script>
-<!--
-	<script type="text/javascript" src="\my_validator.js" ></script>
-	<script type="text/javascript" src="\php sample for email\scripts\gen_validatorv31.js" ></script>
--->
-	</head>
-
 </head>
+
 <body class="intro-4 home">
 	<div class="preloader-overlay">
 		<div class="preloader">
@@ -63,11 +56,11 @@
 					</div>
 					<div class="box2">
 						<ul class="languages">
-							<li><a href="/index.html" title="English">EN</a></li>
-							<li><a href="/index.es.html" title="Español">ES</a></li>
-							<li><a href="/index.pt.html" title="Portugu&#x00EAs">PT</a></li>
-							<li><a href="/index.fr.html" title="Fran&ccedil;ais">FR</a></li>
-							<li><a href="/index.it.html" title="Italiano">IT</a></li>
+							<li><a href="./index.html" title="English">EN</a></li>
+							<li><a href="./index.es.html" title="Español">ES</a></li>
+							<li><a href="./index.pt.html" title="Portugu&#x00EAs">PT</a></li>
+							<li><a href="./index.fr.html" title="Fran&ccedil;ais">FR</a></li>
+							<li><a href="./index.it.html" title="Italiano">IT</a></li>
 						</ul>
 					</div>
 					<img src="img/slider/FZ Pont des Arts 308x308.jpg" class="image" alt="Identicon">
@@ -191,7 +184,6 @@
 								<div class="collapsible-body">
 									<p>2000-2004 at the Research Triangle Park, NC, USA, Project Manager for the PC Division managing 30+ remote resources plus local resources. </p>
 									<p>1997-2000 at Pinebrook, NJ, USA, Project Manager for the Prudential Account managing 70+ remote resources, in charge of all the Y2K Testing of the Prudential Account.</p>
-</p>
 								</div>
 							</li>
 
@@ -357,17 +349,17 @@
 						<p>Please feel fee to leave a message to me. I'm more than interested in hearing from you anytime. Also you can call me or push me a message to my social networks. <br>Thank you <br>Regards -</p>
 					</div>
 					<div class="content-right">
-							<form id="contact_me"  action="/form-to-email2.php" method="post">
+							<form id="contact_me"  action="./form-to-email2.php" onsubmit="return validateForm()" method="post">
 							<div class="row">
 								<div class="col s6">
 									<div class="form-input">
-										Name: <input type="text" name="name" placeholder="your name*">
+										Name: <input type="text" name="name" onkeypress="return resetName()" onclick="return resetName()" placeholder="your name*">
 										<span class="underline"></span>
 									</div>
 								</div>
 								<div class="col s6">
 									<div class="form-input">
-										E-mail: <input type="text" name="email" placeholder="email*">
+										E-mail: <input type="text" name="email" onkeypress="return resetEmail()" onclick="return resetEmail()" placeholder="email*">
 										<span class="underline"></span>
 									</div>
 								</div>
@@ -381,7 +373,7 @@
 								</div>
 								<div class="col s6">
 									<div class="form-input">
-										Website: <input type="text" name="website" placeholder="website">
+										Website: <input type="text" name="website" onkeypress="return resetWebsite()" onclick="return resetWebsite()" placeholder="website">
 										<span class="underline"></span>
 									</div>
 								</div>
@@ -423,16 +415,6 @@
 
 	</div>
 	<!-- ./cvitae-site-container -->
-	<script>
-		Validator("contact_me");
-		var frmvalidator  = new Validator("contact_me");
-		frmvalidator.addValidation("name","req","Please provide your name");
-		frmvalidator.addValidation("email","req","Please provide your email");
-		frmvalidator.addValidation("email","email","Please enter a valid email address");
-alert ("aqui se finaliza")
-		</script>
-	</script>
-	<!-- Validation script -->
 
 	<!-- CVitae Scripts -->
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
@@ -445,5 +427,30 @@ alert ("aqui se finaliza")
 	<script type="text/javascript" src="js/jquery.catslider.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+
+
+	<script>
+		validateForm(contact_me);
+	</script>
+	<script>
+		resetName(name);
+	</script>
+	<script>
+		resetEmail(email);
+	</script>
+	<script>
+		resetWebsite(website);
+	</script>
+	<!-- Validation script -->
+
+
 </body>
+
+<!-- a helper script for validating the form -->
+<script type="text/javascript" src="./my_validator.js" ></script>
+<script type="text/javascript" src="./js/my_reseter_name.js" ></script>
+<script type="text/javascript" src="./js/my_reseter_email.js" ></script>
+<script type="text/javascript" src="./js/my_reseter_website.js" ></script>
+<script type="text/javascript" src="./js/my_reseter_phone.js" ></script>
+<script type="text/javascript" src="./js/my_reseter_message.js" ></script>
 </html>

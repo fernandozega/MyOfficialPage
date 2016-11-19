@@ -1983,7 +1983,7 @@ a:focus {
 }
 
 .site-content .comment-respond .form-input input:focus {
-	border-color: #d3d3d3;
+	border-color: #000000;
 	outline: none;
 }
 
