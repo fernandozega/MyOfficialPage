@@ -11,11 +11,10 @@
     {
       // do nothing, it's ok
     } else  {
-        alert ("entra a website1") ;
         var websiteID = document.forms.contact_me.website.value;
-        var myPattern = "/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i"
+//        var myPattern = "/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i"
+        var myPattern = "/"
       // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-  //    if (websiteID == "pepe")
       if ( !preg_match(myPattern , websiteID) )
       {
         alert (myPattern) ;
@@ -23,7 +22,7 @@
        document.forms.contact_me.website.style.color = "#FF0000";
        document.forms.contact_me.website.focus() ;
        x = 1 ;
-     } else {        alert ("entra a website3") ;}
+     } else {        alert ("entra a website3") ;} //sacar
     }
 
     if( document.forms.contact_me.email.value == "" ||
@@ -66,10 +65,8 @@
     }
 
     if (x == 1) {
-        alert ("false") ;
         return false;
       } else {
-        alert ("true") ;
         return( true );
       }
 }

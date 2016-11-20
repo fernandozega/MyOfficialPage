@@ -257,6 +257,7 @@ a:focus {
 }
 
 
+
 /*
  * --------------------------------------
  * CVitae Classes
@@ -874,15 +875,17 @@ a:focus {
 	content: '';
 	display: block;
 	height: 1px;
-	left: 0;
+	left: -50px;
 	position: absolute;
-	width: 100%;
+	width: 0px
+	//100%;
 }
 
 .cvitae-about-me .links {
 	display: table-cell;
 	font-size: 0;
 	width: 81px;
+
 }
 
 .cvitae-about-me .links a {
@@ -1536,7 +1539,7 @@ a:focus {
 		position: relative;
 		table-layout: fixed;
 		width: 100%;
-
+    text-align: left;
 }
 
 .cvitae-cultural .info:last-child {
@@ -1550,10 +1553,13 @@ a:focus {
 .cvitae-cultural .info span {
 	display: table-cell;
 	position: relative;
+
+  text-align: left;
 }
 
 .cvitae-cultural .info .field-title {
-	width: 70px;
+	width: 0px;
+  text-align: left;
 }
 .cvitae-cultural .content-comments {
 	padding-top: 60px;
@@ -1983,7 +1989,7 @@ a:focus {
 }
 
 .site-content .comment-respond .form-input input:focus {
-	border-color: #000000;
+	border-color: #d3d3d3;
 	outline: none;
 }
 
@@ -3961,6 +3967,7 @@ a:focus {
 	}
 	.cvitae-about-me .info .field-title {
 		width: auto;
+    text-align: left;
 		font-size: 16px;
 		font-weight: 700;
 		margin-bottom: 20px;
