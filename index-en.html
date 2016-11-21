@@ -30,6 +30,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="js/modernizr.js"></script>
 
+
 </head>
 
 <body class="intro-4 home">
@@ -56,11 +57,11 @@
 					</div>
 					<div class="box2">
 						<ul class="languages">
-							<li><a href="./index.html" title="English">EN</a></li>
-							<li><a href="./index.es.html" title="Español">ES</a></li>
-							<li><a href="./index.pt.html" title="Portugu&#x00EAs">PT</a></li>
-							<li><a href="./index.fr.html" title="Fran&ccedil;ais">FR</a></li>
-							<li><a href="./index.it.html" title="Italiano">IT</a></li>
+							<li><a href="./index-en.html" title="English">EN</a></li>
+							<li><a href="./index-es.html" title="Español">ES</a></li>
+							<li><a href="./index-pt.html" title="Portugu&#x00EAs">PT</a></li>
+							<li><a href="./index-fr.html" title="Fran&ccedil;ais">FR</a></li>
+							<li><a href="./index-it.html" title="Italiano">IT</a></li>
 						</ul>
 					</div>
 					<img src="img/slider/FZ Pont des Arts 308x308.jpg" class="image" alt="Identicon">
@@ -120,9 +121,9 @@
 					</div>
 					<div class="content-right about">
 						<h3 class="cvitae-section-title"><span id="p002"></h3>
-						<p class="info"><span class="field-title">Full Name</span> <span class="field-separator">:</span> <span class="field-value">FERNANDO ZEGA</span></p>
-						<p class="info"><span class="field-title">Phone</span> <span class="field-separator">:</span> <span class="field-value">+54 (911) 3212 4956</span></p>
-						<p class="info"><span class="field-title">Email</span> <span class="field-separator">:</span> <span class="field-value">fernando@fernandozega.com</span></p>
+						<p class="info"><span class="field-title"></span> <span id="f001"></span> <span class="field-separator">:</span> <span class="field-value">FERNANDO ZEGA</span></p>
+						<p class="info"><span class="field-title"></span> <span id="f002"></span> <span class="field-separator">:</span> <span class="field-value">+54 (911) 3212 4956</span></p>
+						<p class="info"><span class="field-title"></span> <span id="f003"></span><span class="field-separator">:</span> <span class="field-value">fernando@fernandozega.com</span></p>
 					</div>
 					<div class="links">
 						<a target='_blank' href="https://ar.linkedin.com/in/fernandozega" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Follow on LinkedIn"><span class="ti-linkedin"></span>LinkedIn Profile</a>
@@ -322,13 +323,6 @@
 							<p class="info"><span class="field-title"> </span> <span id="t043"> </span> <span class="field-separator"> </span> <span class="field-value">&#x26AB &#x26AB &#x26AB </span></p>
 							<p class="info"><span class="field-title"> </span> <span id="t044"> </span> <span class="field-separator"> </span> <span class="field-value">&#x26AB &#x26AB &#x26AB </span></p>
 
-<!--
-							<p class="info"><span class="field-title"><span id="t040"></span> <span class="field-separator"> </span> <span class="field-value">&#x26AB &#x26AB &#x26AB &#x26AB &#x26AB </span></p>
-							<p class="info"><span class="field-title"><span id="t041"></span> <span class="field-separator"> </span> <span class="field-value">&#x26AB &#x26AB &#x26AB &#x26AB &#x26AB </span></p>
-							<p class="info"><span class="field-title"><span id="t042"></span> <span class="field-separator"> </span> <span class="field-value">&#x26AB &#x26AB &#x26AB &#x26AB </span></p>
-							<p class="info"><span class="field-title"><span id="t043"></span> <span class="field-separator"> </span> <span class="field-value">&#x26AB &#x26AB &#x26AB </span></p>
-							<p class="info"><span class="field-title"><span id="t044"></span> <span class="field-separator"> </span> <span class="field-value">&#x26AB &#x26AB &#x26AB </span></p>
--->
 						</div>
 
 					</div>
@@ -358,17 +352,19 @@
 						<p><span id="t050"></p>
 					</div>
 					<div class="content-right">
-							<form id="contact_me"  action="./form-to-email2.php" onsubmit="return validateForm()" method="post">
+							<form id="contact_me"  action="./form-to-email2.php" onload "return putPlaceholders()" onsubmit="return validateForm()" method="post">
 							<div class="row">
 								<div class="col s6">
 									<div class="form-input">
-										Name: <input type="text" name="name" onkeypress="return resetName()" onclick="return resetName()" placeholder="your name*">
+										<label for="name"><span id="f004"></label>
+										<input type="text" name="name" onkeypress="return resetName()" onclick="return resetName()">
 										<span class="underline"></span>
 									</div>
 								</div>
 								<div class="col s6">
 									<div class="form-input">
-										E-mail: <input type="text" name="email" onkeypress="return resetEmail()" onclick="return resetEmail()" placeholder="email*">
+										<label for="email"><span id="f005"></label>
+										<input type="text" name="email" onkeypress="return resetEmail()" onclick="return resetEmail()">
 										<span class="underline"></span>
 									</div>
 								</div>
@@ -376,13 +372,15 @@
 							<div class="row">
 								<div class="col s6">
 									<div class="form-input">
-										Phone: <input type="text" name="phone" placeholder="phone">
+										<label for="phone"><span id="f006"></label>
+										<input type="text" name="phone">
 										<span class="underline"></span>
 									</div>
 								</div>
 								<div class="col s6">
 									<div class="form-input">
-										Website: <input type="text" name="website" onkeypress="return resetWebsite()" onclick="return resetWebsite()" placeholder="website">
+										<label for="website"><span id="f007"></label>
+										<input type="text" name="website" onkeypress="return resetWebsite()" onclick="return resetWebsite()">
 										<span class="underline"></span>
 									</div>
 								</div>
@@ -390,7 +388,8 @@
 							<div class="row">
 								<div class="col s12">
 									<div class="form-textarea">
-										Message: <textarea name="message" placeholder="your message"></textarea>
+										<label for="message"><span id="f008"></label>
+										<textarea name="message"></textarea>
 										<span class="underline"></span>
 									</div>
 									<div class="form-submit">
@@ -407,7 +406,7 @@
 			<div class="footer-content">
 				<div class="cvitae-container">
 					<ul class="links">
-						<li class="tooltipped" data-position="top" data-delay="50" data-tooltip="Follow on Twitter"><a target='_blank' href="https://twitter.com/FernandoZega61"><span class="ti-twitter"></span>Twitter Profile</a></li>
+						<li class="tooltipped" data-position="top" data-delay="50" data-tooltip="Follow on Twitter"> <a target='_blank' href="https://twitter.com/FernandoZega61"><span class="ti-twitter"></span>Twitter Profile</a></li>
 						<li class="tooltipped" data-position="top" data-delay="50" data-tooltip="Follow on LinkedIn"><a target='_blank' href="https://ar.linkedin.com/in/fernandozega"><span class="ti-linkedin"></span>Twitter Profile</a></li>
 						<li class="tooltipped" data-position="top" data-delay="50" data-tooltip="Follow on Tumblr"><a target='_blank' href="https://fernandozega.tumblr.com"><span class="ti-tumblr"></span>Twitter Profile</a></li>
 						<li class="tooltipped" data-position="top" data-delay="50" data-tooltip="Follow on WordPress"><a target='_blank' href="https://fernandozega.wordpress.com"><span class="ti-wordpress"></span>Facebook Profile</a></li>
@@ -426,6 +425,34 @@
 	<!-- ./cvitae-site-container -->
 
 	<!-- Text variables -->
+
+			<script> document.getElementById("m000").innerHTML = "LOADING"; </script>
+			<script> document.getElementById("m001").innerHTML = "Home"; </script>
+			<script> document.getElementById("m002").innerHTML = "Summary"; </script>
+			<script> document.getElementById("m003").innerHTML = "Experience"; </script>
+			<script> document.getElementById("m004").innerHTML = "Education"; </script>
+			<script> document.getElementById("m005").innerHTML = "Skills"; </script>
+			<script> document.getElementById("m006").innerHTML = "Cultural"; </script>
+			<script> document.getElementById("m007").innerHTML = "Contact"; </script>
+
+			<script> document.getElementById("p001").innerHTML = "A brief summary"; </script>
+			<script> document.getElementById("p002").innerHTML = "About me"; </script>
+			<script> document.getElementById("p003").innerHTML = "Work experience"; </script>
+			<script> document.getElementById("p004").innerHTML = "Education"; </script>
+			<script> document.getElementById("p005").innerHTML = "Skills"; </script>
+			<script> document.getElementById("p006").innerHTML = "Culturally speaking...."; </script>
+			<script> document.getElementById("p007").innerHTML = "Languages"; </script>
+			<script> document.getElementById("p008").innerHTML = "Contact me"; </script>
+
+			<script> document.getElementById("f001").innerHTML = "Full Name"; </script>
+			<script> document.getElementById("f002").innerHTML = "Phone"; </script>
+			<script> document.getElementById("f003").innerHTML = "Email"; </script>
+			<script> document.getElementById("f004").innerHTML = "Name :"; </script>
+			<script> document.getElementById("f005").innerHTML = "EMail :"; </script>
+			<script> document.getElementById("f006").innerHTML = "Phone :"; </script>
+			<script> document.getElementById("f007").innerHTML = "Website :"; </script>
+			<script> document.getElementById("f008").innerHTML = "Message :"; </script>
+
 			<script> document.getElementById("t001").innerHTML = "Senior Solution Manager with 8+ years of experience in Application Solutions and Innovation for Large deals."; </script>
 			<script> document.getElementById("t002").innerHTML = "Senior Project Manager with 10+ years of experience in Managing Projects and Leading Teams."; </script>
 			<script> document.getElementById("t003").innerHTML = "Strong international and multicultural experience with 15+ years working in Global roles (including 7 years in the US and 4 years in Ireland)."; </script>
@@ -477,26 +504,8 @@
 			<script> document.getElementById("t049").innerHTML = "Thank you"; </script>
 			<script> document.getElementById("t050").innerHTML = "Best of all"; </script>
 
-			<script> document.getElementById("m000").innerHTML = "LOADING"; </script>
-			<script> document.getElementById("m001").innerHTML = "Home"; </script>
-			<script> document.getElementById("m002").innerHTML = "Summary"; </script>
-			<script> document.getElementById("m003").innerHTML = "Experience"; </script>
-			<script> document.getElementById("m004").innerHTML = "Education"; </script>
-			<script> document.getElementById("m005").innerHTML = "Skills"; </script>
-			<script> document.getElementById("m006").innerHTML = "Cultural"; </script>
-			<script> document.getElementById("m007").innerHTML = "Contact"; </script>
-
-			<script> document.getElementById("p001").innerHTML = "A brief summary"; </script>
-			<script> document.getElementById("p002").innerHTML = "About me"; </script>
-			<script> document.getElementById("p003").innerHTML = "Work experience"; </script>
-			<script> document.getElementById("p004").innerHTML = "Education"; </script>
-			<script> document.getElementById("p005").innerHTML = "Skills"; </script>
-			<script> document.getElementById("p006").innerHTML = "Culturally speaking...."; </script>
-			<script> document.getElementById("p007").innerHTML = "Languages"; </script>
-			<script> document.getElementById("p008").innerHTML = "Contact me"; </script>
-
 <!--
-			<script> document.getElementById("l001").innerHTML = "Follow on Twitter"; </script>
+			<script> document.getElementById("l001").innerHTML = "data-tooltip='Follow on Twitter'"; </script>
 -->
 
 	<!-- CVitae Scripts -->
@@ -511,29 +520,26 @@
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
+	<!-- My scripts -->
+	<script type="text/javascript" src="./js/my_form_placeholders.js" ></script>
+	<script type="text/javascript" src="./js/my_reseter_name.js" ></script>
+	<script type="text/javascript" src="./js/my_reseter_email.js" ></script>
+	<script type="text/javascript" src="./js/my_reseter_website.js" ></script>
+	<script type="text/javascript" src="./js/my_reseter_phone.js" ></script>
+	<script type="text/javascript" src="./js/my_reseter_message.js" ></script>
 
-	<script>
-		validateForm(contact_me);
-	</script>
-	<script>
-		resetName(name);
-	</script>
-	<script>
-		resetEmail(email);
-	</script>
-	<script>
-		resetWebsite(website);
-	</script>
+	<script> validateForm(contact_me); </script>
+	<script> resetName(contact_me); </script>
+	<script> resetEmail(contact_me); </script>
+	<script> resetWebsite(contact_me); </script>
 	<!-- Validation script -->
+
+	<script> putPlaceholders(contact_me); </script>
+	<!-- putPlaceholders script -->
 
 
 </body>
 
 <!-- a helper script for validating the form -->
 <script type="text/javascript" src="./my_validator.js" ></script>
-<script type="text/javascript" src="./js/my_reseter_name.js" ></script>
-<script type="text/javascript" src="./js/my_reseter_email.js" ></script>
-<script type="text/javascript" src="./js/my_reseter_website.js" ></script>
-<script type="text/javascript" src="./js/my_reseter_phone.js" ></script>
-<script type="text/javascript" src="./js/my_reseter_message.js" ></script>
 </html>
