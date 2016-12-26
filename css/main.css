@@ -2870,7 +2870,7 @@ a:focus {
 .intro-4 .sliderStyle4 .slider-content .box2  {
 	margin: 0;
   padding: 0;
-	width: 100px;
+	width: 200px;
 	border: 1px solid #ccc;
 	border-radius: 0px;
 	position: absolute;
@@ -2893,7 +2893,8 @@ a:focus {
 
 .intro-4 .sliderStyle4 .slider-content .box2 ul {
 	display: table-cell;
-	width: 100px;
+	width: 200px;
+//	border-spacing: 50px 50px;
 	border: 1px solid #ccc;
 	border-radius: 0px;
 //	position: absolute;
@@ -2915,6 +2916,7 @@ a:focus {
 	width: 100px;
 	border: 1px solid #ccc;
 	border-radius: 0px;
+//	border-spacing: 100px 50px;
 //	position: absolute;
 //	top: 0%;
 //	right: 0%;
@@ -2932,7 +2934,7 @@ a:focus {
 .intro-4 .sliderStyle4 .slider-content .box2 ul li a{
 	border: 0px solid #ccc;
 	border-radius: 0px;
-	width = 100px
+	width = 200px
 	position: absolute;
 	top: 10%;
 	right: -900%;
@@ -2989,6 +2991,7 @@ a:focus {
 	font-weight: 700;
 	color: #000;
 	letter-spacing: 1px;
+
 }
 .intro-4 .sliderStyle4 .slider-content .image {
 	position: absolute;
